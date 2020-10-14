@@ -109,9 +109,9 @@ Module.register("MMM-DVB", {
         if (connection.arrivalTimeRelative === 0) {
             return this.translate("NOW");
         } else if (connection.arrivalTimeRelative === 1) {
-            return 'In ' + connection.arrivalTimeRelative + ' ' + this.translate("MINUTE");
+            return connection.arrivalTimeRelative + ' ' + this.translate("MINUTE");
         } else if (connection.arrivalTimeRelative <= 15) {
-            return 'In ' + connection.arrivalTimeRelative + ' ' + this.translate("MINUTES");
+            return connection.arrivalTimeRelative + ' ' + this.translate("MINUTES");
         } else {
             var arrival = new Date(connection.arrivalTime);
             var arrivalHours = ('0' + arrival.getHours()).slice(-2);
